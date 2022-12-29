@@ -465,7 +465,6 @@ QGroupBox::indicator {
 
 QMenu::indicator,
 QListView::indicator,
-QTableWidget::indicator,
 QRadioButton::indicator,
 QCheckBox::indicator {
   width: {{28|density(density_scale)}}px;
@@ -502,57 +501,6 @@ QListView::indicator:indeterminate:selected:active {
 
 QListView::indicator:indeterminate:disabled {
   image: url(icon:/disabled/checklist_indeterminate.svg);
-}
-
-/*  ------------------------------------------------------------------------  */
-/*  QTableView Indicator  */
-
-QTableView::indicator:enabled:checked,
-QTableView::indicator:enabled:checked:selected,
-QTableView::indicator:enabled:checked:focus {
-  image: url(icon:/primary/checkbox_checked.svg);
-}
-
-QTableView::indicator:checked:selected:active {
-  image: url(icon:/primary/checkbox_checked_invert.svg);
-}
-
-QTableView::indicator:disabled:checked,
-QTableView::indicator:disabled:checked:selected,
-QTableView::indicator:disabled:checked:focus {
-  image: url(icon:/disabled/checkbox_checked.svg);
-}
-
-QTableView::indicator:enabled:unchecked,
-QTableView::indicator:enabled:unchecked:selected,
-QTableView::indicator:enabled:unchecked:focus {
-  image: url(icon:/primary/checkbox_unchecked.svg);
-}
-
-QTableView::indicator:unchecked:selected:active {
-  image: url(icon:/primary/checkbox_unchecked_invert.svg);
-}
-
-QTableView::indicator:disabled:unchecked,
-QTableView::indicator:disabled:unchecked:selected,
-QTableView::indicator:disabled:unchecked:focus {
-  image: url(icon:/disabled/checkbox_unchecked.svg);
-}
-
-QTableView::indicator:enabled:indeterminate,
-QTableView::indicator:enabled:indeterminate:selected,
-QTableView::indicator:enabled:indeterminate:focus {
-  image: url(icon:/primary/checkbox_indeterminate.svg);
-}
-
-QTableView::indicator:indeterminate:selected:active {
-  image: url(icon:/primary/checkbox_indeterminate_invert.svg);
-}
-
-QTableView::indicator:disabled:indeterminate,
-QTableView::indicator:disabled:indeterminate:selected,
-QTableView::indicator:disabled:indeterminate:focus {
-  image: url(icon:/disabled/checkbox_indeterminate.svg);
 }
 
 /*  ------------------------------------------------------------------------  */
@@ -1024,12 +972,6 @@ QToolButton:checked {
 /*  ------------------------------------------------------------------------  */
 /*  General viewers  */
 
-QTableView {
-  background-color: {{secondaryDarkColor}};
-  border: 1px solid {{secondaryColor}};
-  border-radius: 4px;
-}
-
 QTreeView,
 QListView {
   border-radius: 4px;
@@ -1038,7 +980,6 @@ QListView {
   border: 0px;
 }
 
-QTableView::item,
 QTreeView::item,
 QListView::item {
   padding: 4px;
@@ -1051,7 +992,6 @@ QListView::item {
 /*  ------------------------------------------------------------------------  */
 /*  Items Selection */
 
-QTableView::item:selected,
 QTreeView::item:selected,
 QListView::item:selected {
   background-color: {{primaryColor|opacity(0.2)}};
@@ -1060,28 +1000,12 @@ QListView::item:selected {
   selection-color: {{secondaryTextColor}}; /* For Windows */
 }
 
-QTableView::item:selected:focus,
 QTreeView::item:selected:focus,
 QListView::item:selected:focus {
   background-color: {{primaryColor}};
   selection-background-color: {{primaryColor}};
   color: {{primaryTextColor}};
   selection-color: {{primaryTextColor}}; /* For Windows */
-}
-
-QTableView {
-  selection-background-color: {{primaryColor|opacity(0.2)}};
-}
-
-QTableView:focus {
-  selection-background-color: {{primaryColor}};
-}
-
-QTableView::item:disabled {
-  color: {{secondaryTextColor|opacity(0.3)}};
-  selection-color: {{secondaryTextColor|opacity(0.3)}};
-  background-color: {{secondaryColor}};
-  selection-background-color: {{secondaryColor}};
 }
 
 /*  ------------------------------------------------------------------------  */
@@ -1188,18 +1112,6 @@ QPushButton.success:flat:checked {
 /*  ------------------------------------------------------------------------  */
 /*  QTableView  */
 
-QTableCornerButton::section {
-  background-color: {{secondaryColor}};
-  border-radius: 0px;
-  border-right: 1px solid;
-  border-bottom: 1px solid;
-  border-color: {{secondaryDarkColor}};
-}
-
-QTableView {
-  alternate-background-color: {{secondaryColor|opacity(0.7)}};
-}
-
 QHeaderView {
   border: none;
 }
@@ -1249,7 +1161,6 @@ QLCDNumber {
 /*  Inline QLineEdit  */
 
 QTreeView QLineEdit,
-QTableView QLineEdit,
 QListView QLineEdit {
   color: {{secondaryTextColor}};
   background-color: {{secondaryColor}};
